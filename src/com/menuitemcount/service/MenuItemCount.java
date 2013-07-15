@@ -10,11 +10,12 @@ import org.json.simple.parser.JSONParser;
 public class MenuItemCount {
 
 	Long idValueCount = 0L;
-	public void calculateMenuItem(){
+	public void calculateMenuItem(String filePath){
 
 		try{
 
-			String filePath = "src\\\\com\\\\menuitemcount\\\\data\\\\inputFile.txt";
+			filePath = filePath.replaceAll("\\", "\\\\");
+			//String filePath = "src\\\\com\\\\menuitemcount\\\\data\\\\inputFile.txt";
 
 			// Process the file line by line
 			BufferedReader br = new BufferedReader(new FileReader(filePath));
